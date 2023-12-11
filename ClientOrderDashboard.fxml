@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="739.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ClientOrderDashboardController">
+   <children>
+      <Label layoutX="334.0" layoutY="404.0" prefHeight="27.0" prefWidth="209.0" style="-fx-text-fill: yellow;" text="Ready for your Order??">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="362.0" layoutY="142.0" prefHeight="218.0" prefWidth="342.0">
+        <columns>
+          <TableColumn prefWidth="120.800048828125" text="C1">
+               <graphic>
+                  <Label prefHeight="17.0" prefWidth="114.0" text="Package name" />
+               </graphic>
+            </TableColumn>
+          <TableColumn prefWidth="111.199951171875" text="Package Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="386.0" layoutY="111.0" prefHeight="18.0" prefWidth="78.0" style="-fx-text-fill: yellow;" text="Order List :" />
+      <Button fx:id="placeOrder" layoutX="559.0" layoutY="388.0" mnemonicParsing="false" onAction="#PlacesOrder" prefHeight="60.0" prefWidth="162.0" style="-fx-background-color: yellow;" text="PLACE ORDER!" textFill="#0a0b0a" />
+      <Label layoutX="30.0" layoutY="31.0" prefHeight="18.0" prefWidth="150.0" style="-fx-background-color: black; -fx-text-fill: yellow;" text="Client Order Dashboard" />
+      <TabPane layoutX="8.0" layoutY="142.0" prefHeight="217.0" prefWidth="342.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="List of Paper Products">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="306.0">
+                     <children>
+                        <ScrollPane prefHeight="237.0" prefWidth="342.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="336.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="32.0" layoutY="103.0" style="-fx-text-fill: yellow;" text="Package List" />
+   </children>
+</AnchorPane>
